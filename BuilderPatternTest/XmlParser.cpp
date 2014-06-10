@@ -406,7 +406,7 @@ void xml_parser_parse(XmlParser* thiz, const char* xml)
 
 	thiz->read_ptr = xml;
 
-	for (; thiz->read_ptr != '\0';thiz->read_ptr++)
+	for (; *thiz->read_ptr != '\0';thiz->read_ptr++)
 	{
 		char c = thiz->read_ptr[0];
 		switch (state)
